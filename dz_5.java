@@ -2,6 +2,7 @@ public class dz_5 {
     public static void main(String[] args) {
       int[][] map = getMap();
       System.out.println(rawData(getMap()));
+      System.out.println(mapColor(getMap()));
     }
   
     static int[][] getMap() {
@@ -23,6 +24,7 @@ public class dz_5 {
           { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 }
       };
     }
+  
     static String rawData(int[][] map) {
       StringBuilder sb = new StringBuilder();
   
@@ -33,6 +35,32 @@ public class dz_5 {
         sb.append("\n");
       }
   
+      return sb.toString();
+    }
+  
+    static String mapColor(int[][] map) {
+      StringBuilder sb = new StringBuilder();
+  
+      for (int row = 0; row < map.length; row++) {
+        for (int col = 0; col < map[row].length; col++) {
+          switch (map[row][col]) {
+            case 0:
+              sb.append("**‘");
+              break;
+            case -1:
+              sb.append("XX“");
+              break;
+            case -2:
+              break;
+            default:
+              break;
+          }
+        }
+        sb.append("\n");
+      }
+      for (int i = 0; i < 3; i++) {
+        sb.append("\n");
+      }
       return sb.toString();
     }
   }
