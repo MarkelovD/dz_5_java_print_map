@@ -1,6 +1,7 @@
 public class dz_5 {
     public static void main(String[] args) {
       int[][] map = getMap();
+      System.out.println(rawData(getMap()));
     }
   
     static int[][] getMap() {
@@ -21,5 +22,17 @@ public class dz_5 {
           { -1, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, 00, -1 },
           { -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1 }
       };
+    }
+    static String rawData(int[][] map) {
+      StringBuilder sb = new StringBuilder();
+  
+      for (int row = 0; row < map.length; row++) {
+        for (int col = 0; col < map[row].length; col++) {
+          sb.append(String.format("%5d", map[row][col]));
+        }
+        sb.append("\n");
+      }
+  
+      return sb.toString();
     }
   }
